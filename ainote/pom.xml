@@ -12,5 +12,34 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
+    <dependencies>
+           <dependency>
+                 <groupId>org.commonmark</groupId>
+                 <artifactId>commonmark</artifactId>
+                 <version>0.21.0</version>
+           </dependency>
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>20241224</version>
+           </dependency>
+   <dependency>
+        <groupId>org.fxmisc.richtext</groupId>
+        <artifactId>richtextfx</artifactId>
+        <version>0.11.0</version> <!-- Or latest version -->
+</dependency>
+<!-- Firebase -->
+<dependency>
+      <groupId>com.google.firebase</groupId>
+      <artifactId>firebase-admin</artifactId>
+      <version>9.2.0</version>
+</dependency>
+<!-- Google Auth -->
+<dependency>
+      <groupId>com.google.auth</groupId>
+    <artifactId>google-auth-library-oauth2-http</artifactId>
+      <version>0.27.0</version>
+ </dependency>
+</dependencies>
 
 </project>

@@ -11,5 +11,6 @@
         "c:\\javafx-sdk-21.0.7\\lib\\javafx.swing.jar",
         "c:\\javafx-sdk-21.0.7\\lib\\javafx.web.jar",
         "c:\\javafx-sdk-21.0.7\\lib\\javafx-swt.jar"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
