@@ -13,7 +13,7 @@ import java.util.Map;
 import org.json.JSONObject;
 public class AiApiController {
 public String callGeminiAPI(String c2w_ai_prompt) {
-String c2w_ai_apiKey = "<your_api_key>";
+String c2w_ai_apiKey = "AIzaSyCcETIvUtK4ZcuF_u3nf3VGDCvLb-AeHYo";
 // String c2w_ai_url =
 //"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=";
 // JSONObject c2w_ai_json = new JSONObject()
@@ -35,23 +35,14 @@ c2w_ai_conn.setRequestProperty("Content-Type",
 "application/json; charset=UTF-8");
 c2w_ai_conn.setDoOutput(true);
 // Build the JSON request body
-JSONObject c2w_ai_jsonRequest = new JSONObject()
-.put("contents", List.of(
-Map.of("parts", 
-List.of(
-Map.of("text", c2w_ai_prompt
-+ " Give this in 3 to 4 lines")))));
+JSONObject c2w_ai_jsonRequest = new JSONObject().put("contents", List.of(Map.of("parts", List.of(Map.of("text", c2w_ai_prompt+ " Give this in 3 to 4 lines")))));
 // Send the JSON request
 OutputStream c2w_ai_os = c2w_ai_conn.getOutputStream();
-byte[] input = 
-c2w_ai_jsonRequest.toString().getBytes(StandardCharsets.UTF_8);
+byte[] input = c2w_ai_jsonRequest.toString().getBytes(StandardCharsets.UTF_8);
 c2w_ai_os.write(input, 0, input.length);
 // Read the response
 int responseCode = c2w_ai_conn.getResponseCode();
-InputStream c2w_ai_is = (responseCode >= 200 && responseCode < 
-300)
-? c2w_ai_conn.getInputStream()
-: c2w_ai_conn.getErrorStream();
+InputStream c2w_ai_is = (responseCode >= 200 && responseCode < 300)? c2w_ai_conn.getInputStream(): c2w_ai_conn.getErrorStream();
 BufferedReader reader = new BufferedReader(new 
 InputStreamReader(c2w_ai_is, StandardCharsets.UTF_8));
 c2w_ai_response = new StringBuilder();

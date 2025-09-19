@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.ex.Main",
+            "projectName": "ainote"
+        },
+        {
+            "type": "java",
             "name": "main",
             "request": "launch",
             "mainClass": "View.main",
