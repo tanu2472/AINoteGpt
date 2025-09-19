@@ -21,7 +21,7 @@ public static void init() {
 if (firebaseApp == null) {
 try {
 FileInputStream serviceAccount = new FileInputStream("src/main/resources/ai-chat-app.json");
-FirebaseOptions options = FirebaseOptions.builder().setCredentials(GoogleCredentials.fromStream(serviceAccount)).setProjectId("AIzaSyCcETIvUtK4ZcuF_u3nf3VGDCvLb-AeHYo").build();
+FirebaseOptions options = FirebaseOptions.builder().setCredentials(GoogleCredentials.fromStream(serviceAccount)).setProjectId("AIzaSyCcETIvUtK4ZcuF_u3nf3VGDCvLb-AeHYo").build(); //printwise-88e1a
 firebaseApp = FirebaseApp.initializeApp(options);
 } catch (IOException e) {
 LOGGER.log(Level.SEVERE, "Error initializing Firebase: " +e.getMessage(), e);
